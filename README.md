@@ -1,24 +1,19 @@
-# bumapp-ui
+# BUMAPP-FRONTEND
 
-## Project setup
+## Project
 ```
-npm install
+JavaScript (ES6)
+HTML5
 ```
-
-### Compiles and hot-reloads for development
 ```
-npm run serve
+Vue 3
+BootStrap 4.0.0
+JQuery  3.2.1
+Font Awesome 4.7.0
 ```
-
-### Compiles and minifies for production
+## AUTHOR
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+REG NO: BSC-INF-25-19
+NAME: JOEL JONES CHAMBAKATA
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
