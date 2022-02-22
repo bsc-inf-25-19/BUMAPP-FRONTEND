@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class="text-center">
-                <h3>Add category</h3>
+            <div class="col-12 text-center">
+                <h3 class="pt-3">Add category</h3>
             </div>
         </div>
         <div class="row">
@@ -11,21 +11,21 @@
                 <form>
                     <div class="form-group">
                         <label>Product name</label>
-                        <input type="text" class="form-control" />
+                        <input type="text" class="form-control" v-model ="productName" />
                     </div>
                     <div class="form-group">
                         <label>Description</label>
-                        <input type="text" class="form-control" />
+                        <textarea type="text" class="form-control" v-model = "description" />
                     </div>
                     <div class="form-group">
                         <label>Price</label>
-                        <input type="number" class="form-control" />
+                        <input type="number" class="form-control" v-model = "price" />
                     </div>
                     <div class="form-group">
                         <label>Image URL</label>
-                        <input type="text" class="form-control" />
+                        <input type="text" class="form-control" v-model = "imageURL"/>
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
@@ -34,7 +34,13 @@
 
 <script>
 export default {
-    setup() { },
+    data() { 
+        return {
+            productName: "",
+            description: "",
+            imageURL: ""
+        }
+    },
 
 };
 
