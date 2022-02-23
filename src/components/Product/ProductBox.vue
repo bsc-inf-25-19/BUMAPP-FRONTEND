@@ -1,6 +1,6 @@
 <template>
   <div class="card w-100 h-100">
-    
+    <div class="embed-respnsive embed-responsive-by">
       <img class="card-img-top embed-responsive-item " src = product.imgURL alt="Card image cap" />
     </div>
     <div class="card-body">
@@ -20,3 +20,8 @@ export default {
   methods: {}
 };
 </script> 
+<style scoped>
+.card-img-top {
+  object-fit: cover;
+}
+</style>
