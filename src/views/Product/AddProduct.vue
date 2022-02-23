@@ -34,22 +34,26 @@
 
 <script>
 const axios = require("axios");
+const sweetalert = require("sweetalert");
+
 
 export default {
     data() {
         return {
             productName: "",
             description: "",
-            imageURL: ""
+            imageURL: "",
+            price: 0
         }
     },
     methods: {
         addProduct() {
             console.log(this.productName, this.description);
             const newProduct = {
-                productName: this.productName,
+                productName: this.name,
                 description: this.description,
-                imageURL: this.imageURL
+                imageURL: this.imageURL,
+                price : this.price
             };
             const baseURL = "https://fast-fortress-80573.herokuapp.com";
             axios({
@@ -61,7 +65,12 @@ export default {
                 }
 
             })
-            .then(()=>{})
+            .then(()=>{
+                sweetalert({
+                    text : "Product added successfully",
+                    icon : "success",
+                })
+            })
             .catch(err =>{
                 console.log(err);
             })
