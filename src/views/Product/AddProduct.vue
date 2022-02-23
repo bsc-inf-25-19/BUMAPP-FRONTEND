@@ -43,16 +43,16 @@ export default {
             productName: "",
             description: "",
             imageURL: "",
-            price: 0
+            price: ""
         }
     },
     methods: {
         addProduct() {
-            console.log(this.productName, this.description);
+            console.log(this.productName, this.description,this.imageURL,this.price);
             const newProduct = {
-                productName: this.name,
+                name: this.productName,
                 description: this.description,
-                imageURL: this.imageURL,
+                imgURL: this.imageURL,
                 price : this.price
             };
             const baseURL = "https://fast-fortress-80573.herokuapp.com";
