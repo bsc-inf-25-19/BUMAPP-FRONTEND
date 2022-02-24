@@ -8,9 +8,10 @@
     <div class="card-body">
       <h5 class="card-title">{{product.name}}</h5>
       <p class="card-text">{{product.description}}</p>
-            <h3 class="card-text">{{product.price}}</h3>
-
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h3 class="card-text">{{product.price}}</h3>
+      <router-link :to="{name: 'EditProduct', params: {id: product.id}}">
+      <a href="#" class="btn btn-primary">Edit</a>
+      </router-link>
     </div>
   </div>
 </template>
