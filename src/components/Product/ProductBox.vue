@@ -1,7 +1,9 @@
 <template>
   <div class="card w-100 h-100">
     <div class="embed-respnsive embed-responsive-by">
-      <img class="card-img-top embed-responsive-item " src = product.imgURL alt="Card image cap" />
+      <img 
+      class="card-img-top embed-responsive-item " 
+      :src = "product.imgURL" alt="Card image cap" />
     </div>
     <div class="card-body">
       <h5 class="card-title">{{product.name}}</h5>
