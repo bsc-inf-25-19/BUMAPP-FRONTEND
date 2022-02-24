@@ -1,10 +1,40 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
+    <navbar></navbar>
+    <router-link to="/">Home</router-link>|
     <router-link to="/about">About</router-link>
   </div>
-  <router-view/>
+  <router-view :baseURL="baseURL" :products="products"></router-view>
 </template>
+
+<script>
+import Navbar from "./components/Navbar.vue";
+import axios from "axios";
+export default {
+  data() {
+    return {
+      baseURL: "https://fast-fortress-80573.herokuapp.com",
+      //baseURL: "http://localhost:8080/",
+      products: [],
+    };
+  },
+  components: { Navbar },
+  methods: {
+    async fetchData() {
+      // fetch products
+      await axios
+        .get(this.baseURL + '/product/list')
+        .then((res) => (this.products = res.data))
+        .catch((err) => console.log(err));
+    }
+
+  },
+  mounted() {
+    this.fetchData();
+  }
+}
+
+</script>
 
 <style>
 #app {
