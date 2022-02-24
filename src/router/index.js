@@ -3,7 +3,7 @@ import Home from '../views/Home.vue'
 import AddProduct from '../views/Product/AddProduct.vue'
 import Product from '../views/Product/Product.vue'
 import Admin from  '../views/Admin.vue'
-
+import EditProduct from '../views/Product/EditProduct.vue'
 
 
 const routes = [
@@ -29,6 +29,11 @@ const routes = [
     path: '/admin/product/add',
     name: 'AddProduct',
     component: AddProduct
+  },
+  {
+    path: '/admin/product/:id',
+    name: 'EditProduct',
+    component: EditProduct,
   },
   {
     path: '/admin/product',
