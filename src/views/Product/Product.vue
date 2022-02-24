@@ -18,28 +18,20 @@
 </template>
 
 <script>
-const axios = require("axios");
 import ProductBox from "../../components/Product/ProductBox.vue";
 export default {
   name: "Product",
+  props : ["products"],
   components: { ProductBox },
   data() {
     return {
       baseURL: "https://fast-fortress-80573.herokuapp.com",
-      products: []
     };
   },
   methods: {
-    async getProducts() {
-      await axios.get(`${this.baseURL}/product/list`)
-        .then(res => this.products = res.data)
-        .catch(err => console.log(err));
     }
-  },
-  mounted() {
-    this.getProducts();
-  }
-};
+  };
+  
 
 </script>
 <style ></style>
