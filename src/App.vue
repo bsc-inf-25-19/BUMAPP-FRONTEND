@@ -1,10 +1,11 @@
 <template>
   <div id="nav">
-    <navbar></navbar>
-    <router-link to="/">Home</router-link>|
-    <router-link to="/about">About</router-link>
+    <navbar/>
   </div>
-  <router-view :baseURL="baseURL" :products="products"></router-view>
+  <router-view 
+  :baseURL="baseURL" 
+  :products="products"
+  @fetchData ="fetchData"></router-view>
 </template>
 
 <script>
