@@ -1,16 +1,18 @@
 <template>
   <div class="card w-100 h-100">
     <div class="embed-respnsive embed-responsive-by">
-      <img 
-      class="card-img-top embed-responsive-item " 
-      :src = "product.imgURL" alt="Card image cap" />
+      <img
+        class="card-img-top embed-responsive-item"
+        :src="product.imgURL"
+        alt="Card image cap"
+      />
     </div>
     <div class="card-body">
-      <h5 class="card-title">{{product.name}}</h5>
-      <p class="card-text">{{product.description}}</p>
-      <h3 class="card-text">{{product.price}}</h3>
-      <router-link :to="{name: 'EditProduct', params: {id: product.id}}">
-      <a href="#" class="btn btn-primary">Edit</a>
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">{{ product.description.substring(0, 50) }}...</p>
+      <h3 class="card-text">{{ product.price }}</h3>
+      <router-link :to="{ name: 'EditProduct', params: { id: product.id } }">
+        <a href="#" class="btn btn-primary">Edit</a>
       </router-link>
     </div>
   </div>
@@ -18,9 +20,9 @@
 
 <script>
 export default {
-  name: 'productBox',
+  name: "productBox",
   props: ["product"],
-  methods: {}
+  methods: {},
 };
 </script> 
 <style scoped>
