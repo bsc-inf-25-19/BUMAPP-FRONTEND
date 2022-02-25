@@ -7,7 +7,10 @@
     <a class="navbar-brand" href="#">Bumapp</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
+        <router-link 
+        :to="{ name: 'Home' }">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </router-link>
       </li>
       <li class="nav-item">
         <router-link 
