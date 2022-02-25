@@ -24,7 +24,7 @@ export default {
     async fetchData() {
       // fetch products
       await axios
-        .get(this.baseURL + '/product/list')
+        .get(this.baseURL + '/product')
         .then((res) => (this.products = res.data))
         .catch((err) => console.log(err));
     }
