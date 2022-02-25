@@ -3,14 +3,20 @@
     <div class="row">
       <div class="col-12 text-center">
         <h3 class="pt-3">Products</h3>
-        <router-link 
-        :to="{ name: 'AddProduct' }">
-        <button class=" btn" style="float:right">Add new product</button>
-        </router-link>
+        <div>
+          <router-link :to="{ name: 'AddProduct' }">
+            <button class="btn btn-outline-primary" style="float: right">Add new product</button>
+
+          </router-link>
+        </div>
       </div>
     </div>
     <div class="row">
-      <div v-for="product of products" :key="product.id" class="col-xl-4 col-md-6 d-flex">
+      <div
+        v-for="product of products"
+        :key="product.id"
+        class="col-xl-4 col-md-6 d-flex"
+      >
         <ProductBox :product="product"></ProductBox>
       </div>
     </div>
@@ -21,17 +27,14 @@
 import ProductBox from "../../components/Product/ProductBox.vue";
 export default {
   name: "Product",
-  props : ["products"],
+  props: ["products"],
   components: { ProductBox },
   data() {
     return {
       baseURL: "https://fast-fortress-80573.herokuapp.com",
     };
   },
-  methods: {
-    }
-  };
-  
-
+  methods: {},
+};
 </script>
 <style ></style>
