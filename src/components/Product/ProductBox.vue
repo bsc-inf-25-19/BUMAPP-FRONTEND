@@ -8,7 +8,9 @@
       />
     </div>
     <div class="card-body">
-      <h5 class="card-title">{{ product.name }}</h5>
+      <router-link :to="{ name: 'ShowProduct', params: { id: product.id }}">
+        <h5 class="card-title">{{ product.name }}</h5>
+      </router-link>
       <p class="card-text">{{ product.description.substring(0, 50) }}...</p>
       <h3 class="card-text">{{ product.price }}</h3>
       <router-link

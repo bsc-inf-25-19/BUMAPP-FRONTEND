@@ -4,7 +4,7 @@ import AddProduct from '../views/Product/AddProduct.vue'
 import Product from '../views/Product/Product.vue'
 import Admin from  '../views/Admin.vue'
 import EditProduct from '../views/Product/EditProduct.vue'
-
+import ShowProduct from '../views/Product/ShowProduct.vue'
 
 const routes = [
   {
@@ -31,14 +31,20 @@ const routes = [
     component: AddProduct
   },
   {
+    path: '/admin/product',
+    name: 'Product',
+    component: Product
+  }
+  ,
+  {
     path: '/admin/product/:id',
     name: 'EditProduct',
     component: EditProduct,
   },
   {
-    path: '/admin/product',
-    name: 'Product',
-    component: Product
+    path: '/product/show/:id',
+    name: 'ShowProduct',
+    component: ShowProduct,
   }
 ]
 
