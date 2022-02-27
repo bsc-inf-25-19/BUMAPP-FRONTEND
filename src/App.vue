@@ -50,6 +50,13 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+#footer p{
+  font-size: 15px;
+  color:#2c3e50;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  bottom: 0px;
+}
 
 #nav a {
   font-weight: bold;
