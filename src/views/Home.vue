@@ -4,7 +4,9 @@
       <div class="container py-6">
         <header class="text-left text-white py-5">
           <h3 class="mb-4 rounded" id="heading">
-            <a href="#start-shopping" class="bg-white px-2 py-2 rounded">Start shopping</a>
+            <router-link :to="{ name: 'Products' }">
+              <a href="#start-shopping" class="bg-white px-2 py-2 rounded">Start shopping</a>
+            </router-link>
           </h3>
           <p class="lead mb-0 bg-dark p-1 rounded">
             Bumapp is a web application for selling several items used in
