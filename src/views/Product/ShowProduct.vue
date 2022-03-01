@@ -7,7 +7,7 @@
       </div>
       <div class="col-md-6 col-12 pt-3 pt-md-0">
         <h4>{{ product.name }}</h4>
-        <h6 class="font-weight-bold">MWK {{ product.price }}</h6>
+        <h6 class="font-weight-bold"><sup>MWK</sup> {{ product.price }}</h6>
         <p>{{ product.description }}</p>
 
         <div class="d-flex flex-row justify-content-between">
