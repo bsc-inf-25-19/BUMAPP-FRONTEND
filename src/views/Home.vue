@@ -4,11 +4,16 @@
       <div class="container py-6">
         <header class="text-left text-white py-5">
           <h3 class="mb-4 rounded" id="heading">
-            <a href="#start-shopping" class="bg-white px-2 py-2 rounded"
-              >Start shopping</a
-            >
+            <a href="#start-shopping" class="bg-white px-2 py-2 rounded">Start shopping</a>
           </h3>
-          <p class="lead mb-0 bg-dark p-1 rounded">Bumapp</p>
+          <p class="lead mb-0 bg-dark p-1 rounded">
+            Bumapp is a web application for selling several items used in
+            construction , ranging from heavy machinery to light weight , at this point in time ..not many online features
+            are supported.. you can explore the items in our stock from homepage. In the admin panel you may add products
+            to the database which is with the API (having name, description, price and image adress). In the mean time you may
+            create user accounts using the sign up button in the Navigation bar Sign in amd search are to be implemented at a later stage
+            perhaps after adding firebase extensions to support sign in by social networks like facebook or instagram
+          </p>
         </header>
       </div>
     </div>
