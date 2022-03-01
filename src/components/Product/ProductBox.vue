@@ -4,15 +4,15 @@
       <img
         class="card-img-top embed-responsive-item"
         :src="product.imgURL"
-        alt="Card image cap"
+        alt="image for product"
       />
     </div>
     <div class="card-body">
       <router-link :to="{ name: 'ShowProduct', params: { id: product.id }}">
         <h5 class="card-title">{{ product.name }}</h5>
       </router-link>
-      <p class="card-text">{{ product.description.substring(0, 50) }}...</p>
-      <h3 class="card-text">MWK {{ product.price }}</h3>
+      <p class="card-text font-italic">{{ product.description.substring(0, 60) }}...</p>
+      <p class="card-text py-2"><sup>MWK</sup> {{ product.price }}</p>
       <router-link
         :to="{ name: 'EditProduct', params: { id: product.id } }"
         v-show="$route.name == 'Product'"
