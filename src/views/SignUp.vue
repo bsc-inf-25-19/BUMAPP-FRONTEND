@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 text-center pt-3">
                 <router-link :to="{ name: 'Home' }">
-                    <a class="navbar-brand" href="#" style="color:azure">Bumapp</a>
+                    <a class="navbar-brand" href="#" style="color:rgb(14, 13, 1)">Bumapp</a>
                 </router-link>
             </div>
         </div>
@@ -84,9 +84,7 @@
                     <small
                         class="form-text text-muted pt-2 pl-4 text-center"
                     >Already Have an Account?</small>
-                    <p class="text-center">
-                        >Signin Here
-                    </p>
+                    <p class="text-center">Signin Here</p>
                 </div>
             </div>
         </div>
@@ -130,7 +128,7 @@ export default {
                     .then(() => {
                         this.$router.replace("/");
                         swal({
-                            text: "User signup successful. Please Login",
+                            text: "User signup successful",
                             icon: "success",
                             closeOnClickOutside: false,
                         });
